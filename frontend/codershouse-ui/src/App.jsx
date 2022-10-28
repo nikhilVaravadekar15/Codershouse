@@ -2,7 +2,6 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Activate from './pages/Activate';
 import Authenticate from './pages/Authenticate';
 import Home from './pages/Home';
-import Register from "./pages/Register"
 import Rooms from './pages/Rooms';
 
 const isAuth = true;
