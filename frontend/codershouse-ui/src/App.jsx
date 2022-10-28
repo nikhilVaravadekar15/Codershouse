@@ -1,25 +1,48 @@
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Authenticate from './pages/Authenticate';
 import Home from './pages/Home';
 import Register from "./pages/Register"
+import Rooms from './pages/Rooms';
+
+const isAuth = false;
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Switch>
-          <Route path={"/"} exact>
+          <GuestRoute path={"/"} exact>
             <Home />
-          </Route>
-          <Route path={"/authenticate"} >
+          </ GuestRoute>
+          <GuestRoute path={"/authenticate"}>
             <Authenticate />
+          </ GuestRoute>
+          <Route path={"/rooms"} >
+            <Rooms />
           </Route>
-          {/* <Route path={"/register"} >
-            <Register />
-          </Route> */}
         </Switch>
       </BrowserRouter>
     </div>
+  )
+}
+
+
+function GuestRoute({ children, ...rest }) {
+  return (
+    <Route {...rest}
+      render={({ location }) => {
+        return isAuth ?
+          (
+            <Redirect to={{
+              pathname: "/rooms",
+              state: { from: location }
+            }} />
+          )
+          : (
+            children
+          )
+      }}
+    ></Route>
   )
 }
 
