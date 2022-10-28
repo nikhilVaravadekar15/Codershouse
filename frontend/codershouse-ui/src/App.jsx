@@ -5,7 +5,10 @@ import Home from './pages/Home';
 import Register from "./pages/Register"
 import Rooms from './pages/Rooms';
 
-const isAuth = false;
+const isAuth = true;
+const user = {
+  activated: false
+}
 
 function App() {
   return (
@@ -18,9 +21,9 @@ function App() {
           <GuestRoute path={"/authenticate"}>
             <Authenticate />
           </ GuestRoute>
-          <Route path={"/activate"} >
+          <SemiProtectedRoute path={"/activate"}>
             <Activate />
-          </Route>
+          </ SemiProtectedRoute>
           <Route path={"/rooms"} >
             <Rooms />
           </Route>
@@ -45,6 +48,31 @@ function GuestRoute({ children, ...rest }) {
           : (
             children
           )
+      }}
+    ></Route>
+  )
+}
+
+function SemiProtectedRoute({ children, ...rest }) {
+  return (
+    <Route {...rest}
+      render={({ location }) => {
+        return !isAuth ?
+          (
+            <Redirect to={{
+              pathname: "/authenticate",
+              state: { from: location }
+            }} />
+          ) : isAuth && !user.activated ?
+            (
+              children
+            ) :
+            (
+              <Redirect to={{
+                pathname: "/rooms",
+                state: { from: location }
+              }} />
+            )
       }}
     ></Route>
   )
