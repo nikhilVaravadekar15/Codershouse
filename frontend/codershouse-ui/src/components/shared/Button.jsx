@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Button({title, icon, alt, onClick}) {
+function Button({ classname, title, icon, alt, onClick}) {
     return (
         <button 
-            className="Button bg-[#0077ff] flex justify-start items-center gap-3 py-4 px-6 rounded-full"
+            className={`Button bg-[#0077ff] flex justify-start items-center gap-3 rounded-full ${classname}`}
             onClick={onClick}    
         >
             <span>{title}</span>
