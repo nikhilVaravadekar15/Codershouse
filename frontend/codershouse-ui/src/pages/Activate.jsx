@@ -20,6 +20,7 @@ function Activate() {
             return prevState + 1
         })
     }
+
     return (
         <div className="Activate flex flex-col w-screen h-screen">
             <Navigation />

@@ -14,28 +14,39 @@ function StepSetAvatar({ onNext }) {
         <div className="flex justify-center items-center gap-2 -mt-4 text-[#959595] ">
           <span>How's this photo?</span>
         </div>
-        <div className="flex flex-col justify-center items-center gap-2 py-8 cursor-pointer">
+        <div className="flex flex-col justify-center items-center gap-2 py-6 cursor-pointer">
           <div className="mt-2">
-            <div className="w-44 h-44 border rounded-full flex items-center justify-center bg-[#0077ff]"
+            <div className="w-44 h-44 border rounded-full flex items-center justify-center bg-[#0077ff] cursor-pointer"
               style={{
                 width: "166px",
                 height: "166px"
               }}
             >
-              <img src="/assets/images/icons/icon__avatar.png" alt="avatar"
-                draggable="false" className="rounded-full"
-                style={{
-                  width: "154px",
-                  height: "154px"
-                }}
-              />
+              <label htmlFor="profile-picture">
+                <img src="/assets/images/icons/icon__avatar.png"
+                  alt="avatar"
+                  draggable="false"
+                  className="rounded-full cursor-pointer"
+                  style={{
+                    width: "154px",
+                    height: "154px"
+                  }}
+                />
+                <input type="file"
+                  name="profile-picture"
+                  id="profile-picture"
+                  className="hidden w-full h-full"
+                />
+              </label>
             </div>
           </div>
           <div className="flex justify-center">
-            <span className="text-[#0077ff] cursor-pointer ">Choose a different photo</span>
+            <label htmlFor="profile-picture">
+              <span className="text-[#0077ff] cursor-pointer ">Choose a different photo</span>
+            </label>
           </div>
         </div>
-        <div className="flex justify-center cursor-pointer my-4">
+        <div className="flex justify-center cursor-pointer mt-7">
           <Button
             classname={"py-3 px-8"}
             title={"Next"}
