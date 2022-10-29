@@ -14,16 +14,16 @@ function StepOtp({ onNext }) {
         <div className="pb-10">
           <div className="flex justify-center items-center gap-2 pb-2">
             <div className="w-14 h-14 flex justify-center items-center rounded-lg bg-slate-500">
-              <input type="number" minLength="1" maxLength="1" min="0" max="9" className="w-12 h-12 text-black text-center rounded-lg" />
+              <input type="number" minLength="1" maxLength="1" min="0" max="9" className="w-12 h-12 bg-[#323232] text-center rounded-lg focus:border-none focus:outline-none" />
             </div>
             <div className="w-14 h-14 flex justify-center items-center rounded-lg bg-slate-500">
-              <input type="number" minLength="1" maxLength="1" min="0" max="9" className="w-12 h-12 text-black text-center rounded-lg" />
+              <input type="number" minLength="1" maxLength="1" min="0" max="9" className="w-12 h-12 bg-[#323232] text-center rounded-lg focus:border-none focus:outline-none" />
             </div>
             <div className="w-14 h-14 flex justify-center items-center rounded-lg bg-slate-500">
-              <input type="number" minLength="1" maxLength="1" min="0" max="9" className="w-12 h-12 text-black text-center rounded-lg" />
+              <input type="number" minLength="1" maxLength="1" min="0" max="9" className="w-12 h-12 bg-[#323232] text-center rounded-lg focus:border-none focus:outline-none" />
             </div>
             <div className="w-14 h-14 flex justify-center items-center rounded-lg bg-slate-500">
-              <input type="number" minLength="1" maxLength="1" min="0" max="9" className="w-12 h-12 text-black text-center rounded-lg" />
+              <input type="number" minLength="1" maxLength="1" min="0" max="9" className="w-12 h-12 bg-[#323232] text-center rounded-lg focus:border-none focus:outline-none" />
             </div>
           </div>
           <div className="flex justify-center items-center gap-2 text-[#959595] ">

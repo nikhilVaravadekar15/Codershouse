@@ -3,8 +3,9 @@ import Activate from './pages/Activate';
 import Authenticate from './pages/Authenticate';
 import Home from './pages/Home';
 import Rooms from './pages/Rooms';
+import "./App.css"
 
-const isAuth = true;
+const isAuth = false;
 const user = {
   activated: false
 }

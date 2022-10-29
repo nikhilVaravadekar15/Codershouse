@@ -30,7 +30,7 @@ function Home() {
           <div className="flex justify-center cursor-pointer my-4">
             <Button
               classname={"py-3 px-8"}
-              title={"Get your username"}
+              title={"Get's go"}
               icon={"/assets/images/icons/icon__arrow_forward.png"}
               alt={"arrow"}
               onClick={onButtonClick}>

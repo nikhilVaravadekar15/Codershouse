@@ -1,0 +1,24 @@
+.PhoneInput {
+    gap: 4px;
+    padding: 4px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: #323232;
+}
+
+.PhoneInputCountrySelect {
+    border-radius: 8px;
+    color: whitesmoke;
+    background-color: rgb(37, 37, 37);
+}
+
+.PhoneInputInput {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.PhoneInputInput:focus {
+    border: none;
+    outline: none;
+}
