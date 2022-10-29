@@ -9,6 +9,12 @@ const port = process.env.PORT || 5500
 // log request
 app.use(morgan("tiny"))
 
+// express json middleware
+app.use(express.json())
+
+// use router
+app.use("/", require("./server/routes/router"))
+
 app.get("/", (req, res) => {
     res.send("hello world")
 })
